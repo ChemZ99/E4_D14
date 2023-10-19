@@ -29,6 +29,9 @@ public class Persona {
         inverseJoinColumns = @JoinColumn(name = "partecipazione_id")
     )
     private List<Partecipazione> partecipazioni = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "persona_id")
+    private Persona persona;
 
     public Persona() {}
 

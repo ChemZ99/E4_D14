@@ -5,8 +5,8 @@ import java.time.LocalDate;
 import java.util.*;
 
 @Entity
-@Table(name = "events")
-public class Evento {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Evento {
     @Id
     @GeneratedValue
     private long id;
